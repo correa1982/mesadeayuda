@@ -156,6 +156,7 @@
       id="descripcion_solicitud"
       inputmode="text"
       maxlength="{{ MAX_DESC_SOLICITUD }}"
+      required
       oninput="updateCount('descripcion_solicitud')">{{ t['descripcion_solicitud'] if mode=='edit' else '' }}</textarea>
 
     <button type="button" class="btn" onclick="hablar('descripcion_solicitud')" style="margin-top:6px;">

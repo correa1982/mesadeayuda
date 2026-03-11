@@ -256,6 +256,11 @@ def tickets_crear():
         descripcion_solicitud, _ = _limit_text(request.form.get('descripcion_solicitud',''), MAX_DESC_SOLICITUD)
         descripcion_trabajo, _   = _limit_text(request.form.get('descripcion_trabajo',''),   MAX_DESC_TRABAJO)
 
+        # Validación: descripcion_solicitud obligatorio
+        if not descripcion_solicitud.strip():
+            flash('La descripción del servicio es obligatoria.', 'danger')
+            return render_template('tickets/crear.html', t=request.form, mode='create', submit_token=request.form.get('submit_token', ''))
+
         # Evaluaciones
         eval_calidad_servicio      = to_int_1_5(request.form.get('eval_calidad_servicio'))
         eval_calidad_informacion   = to_int_1_5(request.form.get('eval_calidad_informacion'))
