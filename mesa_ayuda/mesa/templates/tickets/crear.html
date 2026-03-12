@@ -104,25 +104,25 @@
            value="{{ t['equipo_cod_inventario'] if mode=='edit' else '' }}">
   </div>
   <div>
-    <label>COIN</label>
+    <label>Coin</label>
     <input type="text" id="inp_coin" name="equipo_coin"
            value="{{ t['equipo_coin'] if mode=='edit' else '' }}">
   </div>
   <div>
-    <label>RAM</label>
+    <label>Ram</label>
     <input type="text" id="inp_ram" name="equipo_ram" placeholder="Ej: 16 GB"
            value="{{ t['equipo_ram'] if mode=='edit' else '' }}">
   </div>
 
   <!-- Fila 3: D. Duro | Procesador | (vacío / futuro Serie) -->
   <div>
-    <label>D. Duro</label>
+    <label>Ssd</label>
     <input type="text" id="inp_disco" name="equipo_disco" placeholder="Ej: 512 GB SSD"
            value="{{ t['equipo_disco'] if mode=='edit' else '' }}">
   </div>
   <div>
     <label>Procesador</label>
-    <input type="text" id="inp_procesador" name="equipo_procesador" placeholder="Ej: Intel i5 10400"
+    <input type="text" id="inp_procesador" name="equipo_procesador" placeholder="Ej: Intel i5 "
            value="{{ t['equipo_procesador'] if mode=='edit' else '' }}">
   </div>
   <div><!-- libre por si luego agregas Serie/GPU/etc. --></div>
